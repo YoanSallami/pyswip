@@ -35,10 +35,10 @@ try:
     else:
         # UNIX-like
         try:
-            _lib = CDLL("libpl.so")
+            _lib = CDLL("libswipl.so")
         except IndexError:
             # let's try the cwd
-            _lib = CDLL("./libpl.so")
+            _lib = CDLL("./libswipl.so")
     
 except OSError:
     print>>sys.stderr, "libpl (shared) not found. Possible reasons:"
